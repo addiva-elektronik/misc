@@ -5,13 +5,15 @@ on:
     branches:
       - 'main'
     tags:
-      - '*'
+      - 'v*'
+    paths:
+      - 'Dockerfile'
 
 env:
   IMAGE_NAME: pandoc
 
 jobs:
-  docker:
+  build:
     runs-on: ubuntu-latest
     permissions:
       packages: write
