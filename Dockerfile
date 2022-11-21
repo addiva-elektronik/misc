@@ -4,6 +4,7 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN    apt-get update -y \
     && apt-get install -y -o Acquire::Retries=10 --no-install-recommends   \
                build-essential git pandoc texlive-full ca-certificates zip \
+	       librsvg2-bin texlive-latex-recommended pandoc-citeproc  	   \
     && update-ca-certificates \
     && apt-get autoremove -y \
     && rm -rf /var/lib/apt/lists/*
